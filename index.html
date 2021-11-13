@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run</title>
+    <style>
+        #exemplo {
+            border: 2px solid #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="exemplo" width="150" height="150"></canvas>
+
+    <script>
+        var canvas = document.getElementById('exemplo');
+        var ctx = canvas.getContext('2d');
+
+        ctx.beginPath();
+        ctx.arc(130, 50, 20, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        ctx.font = '20px Arial';
+        ctx.fillText('Olá, tudo bem?', 0, 130);
+
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(10, 10, 100, 100);
+    </script>
+</body>
+
+</html>
