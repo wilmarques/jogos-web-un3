@@ -14,21 +14,25 @@
 </head>
 
 <body>
-    <canvas id="exemplo" width="150" height="150"></canvas>
+    <canvas id="exemplo" width="200" height="500"></canvas>
 
     <script>
-        var canvas = document.getElementById('exemplo');
-        var ctx = canvas.getContext('2d');
+        const canvas = document.getElementById('exemplo');
+        const ctx = canvas.getContext('2d');
+        let posY = -10;
+        let posX = 0;
 
-        ctx.beginPath();
-        ctx.arc(130, 50, 20, 0, 2 * Math.PI);
-        ctx.stroke();
+        function desenhaObjeto() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillRect(posX, posY, 20, 20);
+            if (posY >= canvas.height) {
+                posX = Math.round(Math.random() * 150);
+                posY = -10;
+            }
+            posY++;
+        }
 
-        ctx.font = '20px Arial';
-        ctx.fillText('Olá, tudo bem?', 0, 130);
-
-        ctx.fillStyle = 'blue';
-        ctx.fillRect(10, 10, 100, 100);
+        setInterval(() => desenhaObjeto(), 10);
     </script>
 </body>
 
