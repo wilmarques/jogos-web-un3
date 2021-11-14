@@ -1,3 +1,5 @@
+[![Gitpod ready to code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/wilmarques/programacao-web-jogos)
+
 # Jogos Digitais - Programação Web Para Jogos
 
 * [Unidade 2 - HTML, CSS e JavaScript para Jogos](./unidade-2/README.md)
